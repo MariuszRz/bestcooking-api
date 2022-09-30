@@ -13,6 +13,8 @@ app.use(express.json());
 
 // mount routes
 app.use("/api/users/", require("./routes/users"));
+app.use("/api/recipes/", require("./routes/recipes"));
+
 app.get("/", (req, res) => {
     res.json("hello");
 });
