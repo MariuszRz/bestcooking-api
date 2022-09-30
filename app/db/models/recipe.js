@@ -17,6 +17,7 @@ const recipeSchema = new Schema({
         lowercase: true,
         unique: true,
     },
+    preparation: String,
     thumbnail: String,
     images: [{ image: String, thumb: String }],
     user: {
@@ -24,6 +25,10 @@ const recipeSchema = new Schema({
         ref: "User",
     },
     category: Array,
+    rating: {
+        type: Number,
+        default: 0,
+    },
     isPublish: {
         type: Number,
         min: 0,

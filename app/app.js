@@ -10,7 +10,7 @@ app.use(useragent.express());
 
 // body prser // application/x-www-form-urlencoded
 app.use(express.json());
-
+app.use(require("./services/analytics"));
 // mount routes
 app.use("/api/users/", require("./routes/users"));
 app.use("/api/recipes/", require("./routes/recipes"));
